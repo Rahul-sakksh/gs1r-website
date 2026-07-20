@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gs1r.ai/sitemap.xml
