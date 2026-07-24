@@ -15,21 +15,21 @@
 <meta name="twitter:image" content="https://gs1r.ai/assets/og-image.png">
 <meta name="twitter:title" content="What a GS1 Barcode Doesn't Protect | GS1R">
 <meta name="twitter:description" content="A GS1 barcode gives your product a valid identity, but doesn't confirm any individual scan is genuine. Here's the gap, and how authentication closes it.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2718%27 fill=%27%230B1220%27/%3E%3Ctext x=%2750%27 y=%2765%27 font-size=%2748%27 font-family=%27Arial,sans-serif%27 font-weight=%27700%27 fill=%27%231D5CE0%27 text-anchor=%27middle%27%3ER%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 rx=%2718%27 fill=%27%23163e64%27/%3E%3Ctext x=%2750%27 y=%2765%27 font-size=%2748%27 font-family=%27Arial,sans-serif%27 font-weight=%27700%27 fill=%27%23466684%27 text-anchor=%27middle%27%3ER%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0B1220;
-  --registry-blue:#1D5CE0;
+  --ink:#163e64;
+  --registry-blue:#163e64;
   --paper:#FFFFFF;
-  --barcode-black:#0B1220;
-  --signal-amber:#1D5CE0;
-  --hairline:#E5E9F0;
-  --ink-soft:#5B6472;
-  --panel-tint:#F7F9FC;
+  --barcode-black:#163e64;
+  --signal-amber:#163e64;
+  --hairline:#c9d2db;
+  --ink-soft:#68829b;
+  --panel-tint:#f0f4f8;
   --success:#16A34A;
-  --danger:#DC2626;
+  --danger:#e53535;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
@@ -52,7 +52,7 @@ nav{display:flex;gap:32px;align-items:center;}
 nav a{font-size:14.5px;font-weight:500;color:var(--ink-soft);transition:color .15s;}
 nav a:hover{color:var(--registry-blue);}
 .nav-cta{background:var(--registry-blue);color:#fff!important;padding:9px 18px;border-radius:6px;font-size:13.5px;font-weight:600;}
-.nav-cta:hover{background:#1547B8;}
+.nav-cta:hover{background:#0d2c48;}
 
 /* Mobile hamburger (checkbox toggle, no JS) */
 .menu-toggle{display:none;}
@@ -63,7 +63,7 @@ nav a:hover{color:var(--registry-blue);}
 .breadcrumb{font-family:'IBM Plex Mono', monospace;font-size:12.5px;color:var(--ink-soft);padding:20px 0 0;}
 .breadcrumb a{color:var(--registry-blue);}
 .article-head{padding:20px 0 40px;max-width:760px;}
-.eyebrow{font-family:'Inter', sans-serif;font-size:12.5px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--registry-blue);margin-bottom:16px;display:inline-block;background:#E9F0FE;padding:4px 10px;border-radius:20px;}
+.eyebrow{font-family:'Inter', sans-serif;font-size:12.5px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase;color:var(--registry-blue);margin-bottom:16px;display:inline-block;background:rgba(22,62,100,0.07);padding:4px 10px;border-radius:20px;}
 h1{font-family:'Inter', sans-serif;font-weight:700;font-size:36px;line-height:1.2;letter-spacing:-0.5px;margin-bottom:18px;}
 .dek{font-size:17px;color:var(--ink-soft);}
 .meta-row{display:flex;gap:20px;margin-top:22px;font-size:13px;color:var(--ink-soft);font-family:'IBM Plex Mono', monospace;}
@@ -76,8 +76,8 @@ h1{font-family:'Inter', sans-serif;font-weight:700;font-size:36px;line-height:1.
 .toc a:hover{color:var(--registry-blue);}
 
 .content h2{font-family:'Inter', sans-serif;font-weight:700;font-size:23px;margin:44px 0 16px;letter-spacing:-0.3px;}
-.content p{font-size:15.5px;margin-bottom:16px;color:#33404F;}
-.content ul{margin:0 0 16px 20px;font-size:15.5px;color:#33404F;}
+.content p{font-size:15.5px;margin-bottom:16px;color:#2c5073;}
+.content ul{margin:0 0 16px 20px;font-size:15.5px;color:#2c5073;}
 .content li{margin-bottom:8px;}
 
 .callout{background:var(--panel-tint);border:1px solid var(--hairline);border-left:3px solid var(--registry-blue);border-radius:0 8px 8px 0;padding:16px 20px;font-size:14.5px;color:var(--ink);margin:24px 0;}
@@ -99,11 +99,13 @@ td.mono{font-family:'IBM Plex Mono', monospace;}
 
 /* Ratifye bridge block, embedded within articles */
 .bridge-inline{background:var(--ink);color:#fff;padding:36px 32px;border-radius:12px;margin-top:20px;}
-.bridge-inline .eyebrow{background:rgba(93,141,239,0.15);color:#5B8DEF;}
+.bridge-inline .eyebrow{background:rgba(93,141,239,0.15);color:#ffffff;}
 .bridge-inline h3{font-family:'Inter', sans-serif;font-size:20px;margin-bottom:10px;font-weight:700;}
-.bridge-inline p{color:#AEB8C7;font-size:14.5px;margin-bottom:20px;}
+.bridge-inline p{color:#c9d2db;font-size:14.5px;margin-bottom:20px;}
 .btn-primary{background:var(--registry-blue);color:#fff;padding:12px 22px;font-size:14px;font-weight:600;border-radius:6px;display:inline-block;}
-.btn-primary:hover{background:#1547B8;}
+.btn-primary:hover{background:#0d2c48;}
+.btn-offer{background:#e6f4ea;color:#137333!important;border:1px solid #34a853;padding:12px 22px;font-size:14px;font-weight:700;border-radius:6px;display:inline-block;transition:all .15s ease;text-decoration:none;}
+.btn-offer:hover{background:#d2e9d9;border-color:#137333;color:#0b461f!important;box-shadow:0 4px 14px rgba(22,163,74,0.2);transform:translateY(-1px);}
 .btn-ghost{border:1px solid var(--hairline);color:var(--ink);padding:13px 24px;font-size:14.5px;font-weight:600;border-radius:6px;display:inline-block;transition:border-color .15s;}
 .btn-ghost:hover{border-color:var(--registry-blue);}
 
@@ -115,7 +117,7 @@ td.mono{font-family:'IBM Plex Mono', monospace;}
 .bars{display:flex;align-items:stretch;height:64px;gap:2px;margin-bottom:16px;}
 .bars span{background:#fff;display:block;}
 .digits{font-family:'IBM Plex Mono', monospace;color:#fff;font-size:15px;letter-spacing:4px;text-align:center;opacity:0.92;}
-.decode-label{font-family:'IBM Plex Mono', monospace;color:#8A93A8;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-align:center;margin-top:14px;}
+.decode-label{font-family:'IBM Plex Mono', monospace;color:#a5b5c3;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-align:center;margin-top:14px;}
 
 .section{padding:48px 0;}
 .section-head{margin-bottom:32px;max-width:600px;}
@@ -139,9 +141,9 @@ td.mono{font-family:'IBM Plex Mono', monospace;}
 
 .bridge{background:var(--ink);color:#fff;padding:56px 0;margin-top:32px;}
 .bridge .wrap{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-.bridge .eyebrow{background:rgba(93,141,239,0.15);color:#5B8DEF;}
+.bridge .eyebrow{background:rgba(93,141,239,0.15);color:#ffffff;}
 .bridge h2{font-family:'Inter', sans-serif;font-weight:700;font-size:25px;max-width:520px;line-height:1.3;margin-bottom:0;}
-.bridge p{color:#AEB8C7;margin-top:12px;max-width:520px;font-size:15px;}
+.bridge p{color:#c9d2db;margin-top:12px;max-width:520px;font-size:15px;}
 .bridge .btn-primary{white-space:nowrap;}
 
 footer{border-top:1px solid var(--hairline);padding:32px 0;margin-top:20px;}
@@ -238,7 +240,7 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;margin-top:20px;}
         <span class="eyebrow">Where GS1R ends and Ratifye begins</span>
         <h3>Ratifye layers authentication directly on top of your existing GS1 barcode</h3>
         <p>No new hardware, no repackaging — every scan verified in under 80ms, live in two weeks, with 500 free authentications to start.</p>
-        <a class="btn-primary" href="https://ratifye.ai/solutions/anti-counterfeit" target="_blank" rel="noopener">See how Ratifye works →</a>
+        <a class="btn-offer" href="https://ratifye.ai/solutions/anti-counterfeit" target="_blank" rel="noopener">See how Ratifye works →</a>
       </div>
 
     </div>
