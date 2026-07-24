@@ -102,6 +102,8 @@ td.mono{font-family:'IBM Plex Mono', monospace;}
 .bridge-inline .eyebrow{background:rgba(93,141,239,0.15);color:#ffffff;}
 .bridge-inline h3{font-family:'Inter', sans-serif;font-size:20px;margin-bottom:10px;font-weight:700;}
 .bridge-inline p{color:#c9d2db;font-size:14.5px;margin-bottom:20px;}
+.bridge-inline .btn-primary,.bridge .btn-primary{background:#ffffff!important;color:#163e64!important;font-weight:700;border:none!important;box-shadow:none!important;transition:all .15s ease;}
+.bridge-inline .btn-primary:hover,.bridge .btn-primary:hover{background:#f0f4f8!important;color:#0d2c48!important;border:none!important;box-shadow:none!important;transform:translateY(-1px);}
 .btn-primary{background:var(--registry-blue);color:#fff;padding:12px 22px;font-size:14px;font-weight:600;border-radius:6px;display:inline-block;}
 .btn-primary:hover{background:#0d2c48;}
 .btn-offer{background:#e6f4ea;color:#137333!important;border:1px solid #34a853;padding:12px 22px;font-size:14px;font-weight:700;border-radius:6px;display:inline-block;transition:all .15s ease;text-decoration:none;}
@@ -175,12 +177,22 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;margin-top:20px;}
   .menu-toggle:checked ~ nav{max-height:320px;opacity:1;pointer-events:auto;}
 }
 
+
+.bridge-inline .btn-primary, .bridge .btn-primary { background: #16a34a !important; color: #ffffff !important; font-weight: 700; box-shadow: 0 4px 12px rgba(22,163,74,0.3); transition: all .15s ease; }
+.bridge-inline .btn-primary:hover, .bridge .btn-primary:hover { background: #15803d !important; color: #ffffff !important; box-shadow: 0 6px 18px rgba(22,163,74,0.45); transform: translateY(-1px); }
+
+.no-hover, .no-hover:hover{background:var(--registry-blue)!important;color:#ffffff!important;transform:none!important;box-shadow:none!important;transition:none!important;}
 </style>
 <style>
   .btn-primary{background:var(--registry-blue);color:#fff;}
   .btn-primary:hover{background:#234A87;}
   .bridge .btn-primary{background:var(--signal-amber);color:var(--ink);}
   .bridge .btn-primary:hover{background:#C67F1F;}
+
+.bridge-inline .btn-primary, .bridge .btn-primary { background: #16a34a !important; color: #ffffff !important; font-weight: 700; box-shadow: 0 4px 12px rgba(22,163,74,0.3); transition: all .15s ease; }
+.bridge-inline .btn-primary:hover, .bridge .btn-primary:hover { background: #15803d !important; color: #ffffff !important; box-shadow: 0 6px 18px rgba(22,163,74,0.45); transform: translateY(-1px); }
+
+.no-hover, .no-hover:hover{background:var(--registry-blue)!important;color:#ffffff!important;transform:none!important;box-shadow:none!important;transition:none!important;}
 </style>
 <!-- Google Analytics (GA4) -- replace G-XXXXXXXXXX with your real Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -213,7 +225,7 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;margin-top:20px;}
     <h1>Every product needs an identity before it can be sold, scanned, or trusted.</h1>
     <p class="lede">GS1R is a plain-English resource on GS1 barcodes, GTIN registration, and pricing for businesses in India — no jargon, no sales pitch, just the process.</p>
     <div class="hero-ctas">
-      <a class="btn-primary" href="gs1-barcode-registration-india-guide.html">Register your barcode</a>
+      <a class="btn-primary no-hover" style="transition: none !important;" href="gs1-barcode-registration-india-guide.html">Register your barcodes</a>
       <a class="btn-ghost" href="#guides">Understand GS1 first</a>
     </div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px;">
@@ -312,7 +324,7 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;margin-top:20px;}
       <h2>A barcode gives your product an identity. It doesn't protect it.</h2>
       <p>Once your GTIN is live, the next question is whether that identity can be copied. See how Ratifye authenticates every scan in under 80ms — no new hardware, live in two weeks.</p>
     </div>
-    <a class="btn-offer" style="background-color: #16a34a !important; color: #ffffff !important;" href="https://ratifye.ai/claim-offer/" target="_blank" rel="noopener">Claim your GS1 Subscriber offer →</a>
+    <a class="btn-offer" style="background-color: #ffffff !important; color: #163e64 !important; font-weight: 700; border: none !important; box-shadow: none !important;" href="https://ratifye.ai/claim-offer/" target="_blank" rel="noopener">Claim your GS1 Subscriber offer →</a>
   </div>
 </section>
 
